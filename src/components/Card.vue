@@ -14,12 +14,15 @@ const props = defineProps({
 </script>
 
 <template>
-<!-- Podemos usar en el template directamente las propiedades, simplemente poniendo su nomre --> 
+    <!-- Podemos usar en el template directamente las propiedades, simplemente poniendo su nomre -->
 
     <img v-if="!reveal" :src="back" alt="pokemon card">
     <img v-else :src="front" alt="pokemon butterfly">
 
 </template>
 
-<style>
+<style scoped>
+img {
+    width: clamp(69px, 18vw, 175px);
+}
 </style>
